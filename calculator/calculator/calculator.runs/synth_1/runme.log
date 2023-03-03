@@ -1,0 +1,255 @@
+
+*** Running vivado
+    with args -log calculator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source calculator.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/utils_1/imports/synth_1/calculator.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/utils_1/imports/synth_1/calculator.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top calculator -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10064
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 836.000 ; gain = 410.910
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'calculator' [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:169]
+INFO: [Synth 8-6157] synthesizing module 'Add_Sub' [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Add_Sub' (0#1) [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mul' [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'mul' (0#1) [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'calculator' (0#1) [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:169]
+WARNING: [Synth 8-3848] Net carry_out in module/entity calculator does not have driver. [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:180]
+WARNING: [Synth 8-7129] Port carry_out in module calculator is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 925.820 ; gain = 500.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 925.820 ; gain = 500.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 925.820 ; gain = 500.730
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+WARNING: [Synth 8-327] inferring latch for variable 'ADD_B_reg' [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:78]
+WARNING: [Synth 8-327] inferring latch for variable 'op_code_inner_reg' [C:/Users/31230/Desktop/calculator/calculator/calculator.srcs/sources_1/new/calculator.v:117]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 925.820 ; gain = 500.730
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               65 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   65 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port carry_out in module calculator is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[31]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[30]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[29]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[28]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[27]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[26]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[25]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[24]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[23]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[22]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[21]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[20]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[19]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[18]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[17]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[16]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[15]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[14]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[13]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[12]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[11]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[10]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[9]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[8]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[7]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[6]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[5]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[4]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[3]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[2]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[1]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (mul_inner/ADD_B_reg[0]) is unused and will be removed from module calculator.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT2   |     2|
+|4     |LUT3   |     3|
+|5     |LUT4   |    39|
+|6     |LUT5   |    66|
+|7     |LUT6   |     5|
+|8     |FDCE   |   104|
+|9     |LDC    |     1|
+|10    |LDCP   |     2|
+|11    |IBUF   |    69|
+|12    |OBUF   |    34|
+|13    |OBUFT  |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+--------+------+
+|      |Instance    |Module  |Cells |
++------+------------+--------+------+
+|1     |top         |        |   335|
+|2     |  AS_inner  |Add_Sub |    40|
+|3     |  mul_inner |mul     |   190|
++------+------------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.258 ; gain = 692.168
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1126.078 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1221.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  LDC => LDCE: 1 instance 
+  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 2 instances
+
+Synth Design complete, checksum: 5c74b6a0
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1221.578 ; gain = 803.461
+INFO: [Common 17-1381] The checkpoint 'C:/Users/31230/Desktop/calculator/calculator/calculator.runs/synth_1/calculator.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file calculator_utilization_synth.rpt -pb calculator_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  3 11:02:38 2023...
